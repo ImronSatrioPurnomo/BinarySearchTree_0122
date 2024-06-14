@@ -108,41 +108,46 @@ public:
 };
 
 int main()
-{
-	BinaryTree x;
-	while (true)
 	{
-		cout << "1. Implement insert operation" << endl;
-		cout << "2. Perform inorder traversal" << endl;
-		cout << "3. Perform preorder traversal" << endl;
-		cout << "4. Perform postorder traversal" << endl;
-		cout << "5. Exit" << endl;
-		cout << "\nEnter your choice (1-5) : ";
+		BinaryTree x;
+		while (true)
+		{
+			cout << "1. Implement insert operation" << endl;
+			cout << "2. Perform inorder traversal" << endl;
+			cout << "3. Perform preorder traversal" << endl;
+			cout << "4. Perform postorder traversal" << endl;
+			cout << "5. Exit" << endl;
+			cout << "\nEnter your choice (1-5) : ";
 
-		char ch;
-		cin >> ch;
-		cout << endl;
+			char ch;
+			cin >> ch;
+			cout << endl;
 
-		switch (ch)
-		{
-		case '1':
-		{
-			cout << "Enter a word: ";
-			string word;
-			cin >> word;
-			x.insert(word);
-			break;
+			switch (ch)
+			{
+			case '1':
+			{
+				cout << "Enter a word: ";
+				string word;
+				cin >> word;
+				x.insert(word);
+				break;
+			}
+			case '2':
+			{
+				x.inorder(x.ROOT);
+				break;
+			}
+			case '3':
+			{
+				x.preorder(x.ROOT);
+				break;
+			}
+			case '4':
+			{
+				x.postorder(x.ROOT);
+				break;
+			}
+			
 		}
-		case '2':
-		{
-			x.inorder(x.ROOT);
-			break;
-		}
-		case '3':
-		{
-			x.preorder(x.ROOT);
-			break;
-		}
-		
 	}
-}
